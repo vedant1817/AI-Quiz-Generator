@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #d8d8d8;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #243b55;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.hidden {
+    display: none;
+}
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.progress {
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #243b55;
+    border-radius: 10px;
+}
+
+#question {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.option {
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #f1f1f1;
+}
+
+.option.selected {
+    border-color: #243b55;
+    background: #eaf0f7;
+}
+
+.option.correct {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+.option.wrong {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+.score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #243b55;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+.result-details {
+    text-align: center;
+    line-height: 2;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Quiz Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>🤖 AI Quiz Generator</h1>
+            <p>Test your knowledge with a smart adaptive quiz</p>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="card">
+
+            <h2>Start Your Quiz</h2>
+
+            <label>Choose Subject</label>
+            <select id="subject">
+                <option value="java">Java Programming</option>
+                <option value="python">Python</option>
+                <option value="dsa">Data Structures</option>
+                <option value="ai">Artificial Intelligence</option>
+            </select>
+
+            <label>Difficulty Level</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <label>Number of Questions</label>
+            <select id="question-count">
+                <option value="5">5 Questions</option>
+                <option value="10">10 Questions</option>
+            </select>
+
+            <button onclick="startQuiz()">Start Quiz 🚀</button>
+
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="card hidden">
+
+            <div class="quiz-top">
+                <span id="question-number">Question 1/5</span>
+                <span id="timer">⏱ 30</span>
+            </div>
+
+            <div class="progress">
+                <div id="progress-bar"></div>
+            </div>
+
+            <h2 id="question">Question goes here</h2>
+
+            <div id="options"></div>
+
+            <button id="next-btn" onclick="nextQuestion()">
+                Next →
+            </button>
+
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="card hidden">
+
+            <h2>🎉 Quiz Completed!</h2>
+
+            <div class="score-circle">
+                <span id="score">0</span>
+            </div>
+
+            <p id="result-message"></p>
+
+            <div class="result-details">
+                <p>Correct Answers: <b id="correct">0</b></p>
+                <p>Wrong Answers: <b id="wrong">0</b></p>
+                <p>Percentage: <b id="percentage">0%</b></p>
+            </div>
+
+            <button onclick="restartQuiz()">🔄 Try Again</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
